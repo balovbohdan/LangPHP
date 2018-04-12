@@ -46,7 +46,7 @@ namespace libs\php\lang;
  */
 class UserProfileLang extends Lang {
     /**
-     * Ponstructor.
+     * Constructor.
      * @param array $params (optional) Parameters. (See superclass.)
      * @throws LangException
      */
