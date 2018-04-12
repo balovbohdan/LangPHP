@@ -4,7 +4,6 @@ namespace libs\php\lang;
 /**
  * Works width language data.
  * Helps to organize web-site multilanguage as simple as possible.
- * Class Lang
  * @package libs\php\lang
  * @author Balov Bohdan <balovbohdan@gmail.com>
  * @version 1.0.0
