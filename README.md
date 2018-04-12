@@ -34,11 +34,35 @@ app
 
 ## 2. Better usage
 It is better when you make subclasses of the main language class for the different logical blocks of your web-site. For instance: user profile, news, articles, admin page, etc.
+Lets create language class for user profile page (file `UserProfileLang.php`):
 
-[example here]
+```php
+<?php
+namespace libs\php\lang;
 
-Do note that UserProfileLang class is singletone; it means that it is possible to make only one instance of it (when you creating instance more than one time you get the same instance). So now we can rewrite code from the first example. As you can see it looks pretty good and laconically.
+/**
+ * Language class for user profile page.
+ * @package libs\php\lang
+ */
+class UserProfileLang extends Lang {
+    /**
+     * Ponstructor.
+     * @param array $params (optional) Parameters. (See superclass.)
+     * @throws LangException
+     */
+    function __construct(array $params = array()) {
+        $params["root"] = DIRECTORY_SEPARATOR . "lang" . DIRECTORY_SEPARATOR . "user-profile" . DIRECTORY_SEPARATOR;
+        parent::__construct($params);
+    }
+}
+?>
+```
 
-[example here]
+So now we can rewrite code from the first example. As you can see it looks pretty good and laconically.
+
+```html
+<!-- Make instance. -->
+<? $lang = new UserProfileLang(); ?>
+```
 
 This version of making language instance much more safe. Using classes of the certain logical web-site blocks you can't make mistake in the paths to language data folders. (And you don't need type the same paths again and again!)
