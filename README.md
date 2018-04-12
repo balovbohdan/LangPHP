@@ -6,7 +6,14 @@ You can find JS version of this class at https://github.com/balovbohdan/LangJS
 ## 1. Simple example
 You can use this language class directly (see code below). But it is better to make subclasses of this class for different logical blocks of the web-site (see next example).
 
-[example here]
+```html
+<!-- Make instance. -->
+<? $lang = new Lang(["root" => "/lang/user-profile/"]); ?>
+
+<!-- Create page elements. -->
+<div class="user-name"><?= $lang->get("name"); ?>: James</div>
+<div class="user-surname"><?= $lang->get("surname"); ?>: Bond</div>
+```
 
 For this example you have to organize this folders/files structure:
 
