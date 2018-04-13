@@ -1,6 +1,5 @@
 # LangPHP
-Class to make multilanguage of web-site as easy as possible. PHP version.
-You can find JS version of this class at https://github.com/balovbohdan/LangJS
+Class to make multilanguage of web-site as easy as possible. Gets language data from `.json` files. You can find JS version of this class at https://github.com/balovbohdan/LangJS
 
 # Examples
 ## 1. Simple example
